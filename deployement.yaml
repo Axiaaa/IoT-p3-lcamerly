@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wil-playground
+  namespace: dev
 spec:
   replicas: 1
   selector:
@@ -14,6 +15,6 @@ spec:
     spec:
       containers:
       - name: playground
-        image: wil42/playground:v1 # Change ce tag pour v2 lors de la mise à jour
+        image: wil42/playground:v1
         ports:
         - containerPort: 8888
