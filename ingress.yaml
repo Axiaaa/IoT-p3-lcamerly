@@ -3,11 +3,10 @@ kind: Ingress
 metadata:
   name: apps-ingress
   annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
-
+    traefik.ingress.kubernetes.io/router.tls: "false"
 spec:
   rules:
-    - host: application.com
+    - host: application.local
       http:
         paths:
           - path: /
